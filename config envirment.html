@@ -1,0 +1,45 @@
+<h1> This is study the kernel document</h1>
+<hr/>
+
+<h3>1 start up envirment:</h3>
+
+<ol>
+  <li>use mark up to node the document 
+       <pre>sudo apt-get install retext </pre>  
+  </li> 
+  <li> 
+       <ul>
+         <li> install <a href="https://my.vmware.com/cn/web/vmware/free">vmware player</a> 
+      instal 
+         </li>
+         <li> install ubuntu virtual ,enable debug:
+               <pre>echo "debugStub.listen.guest64=1" >> /root/vmware/FC4\ Linux/FC4\ Linux.vmx</pre>
+         </li>
+      </ul>
+  </li>
+  
+  <li>configure kgdb:
+      <ol type="a">
+         <li>complie the kernel</li>
+         
+         <ol type="i">
+             <li> make menuconfig,set debug config</li>
+             <li> build the kernel
+                 <pre>CONCURRENCY_LEVEL=4 fakeroot make-kpkg --initrd  kernel-image kernel-headers kernel_debug to</pre>
+             </li>
+         </ol> 
+                 
+         <li> start gdb:<pre> 
+                  (gdb) file vmlinux
+                  (gdb) target remote localhost:8864
+              </pre>
+         </li> 
+      </ol>
+  </li> 
+     
+  
+</ol>
+     
+
+
+
