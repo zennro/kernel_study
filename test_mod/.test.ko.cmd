@@ -1,0 +1,1 @@
+cmd_/home/tanguofu/libs/systemtab/test_mod/test.ko := ld -r -m elf_x86_64 -T /usr/src/linux-headers-3.13.0-35-generic/scripts/module-common.lds --build-id  -o /home/tanguofu/libs/systemtab/test_mod/test.ko /home/tanguofu/libs/systemtab/test_mod/test.o /home/tanguofu/libs/systemtab/test_mod/test.mod.o
